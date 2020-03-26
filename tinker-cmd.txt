@@ -1,0 +1,11 @@
+Cria user
+App\Client::create(['name'=> 'cliente, 'email'=> 'b@b.com', 'address'=> 'Rua B', 'tel'=> '11009810839']);
+
+Lista usuário selecionado
+App\Client::find(1);
+
+Cria Venda
+App\Sales::create(['customer_id'=> 1, 'sale_date'=> date('Ymd'), 'seller_id'=> 1]);
+
+Usando método criado no model de Client
+App\Client::find(1)->sales;
