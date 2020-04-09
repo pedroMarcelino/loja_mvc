@@ -18,3 +18,13 @@ Route::get('/', function () {
 Route::get('/avisos', function () {
     return view('avisos');
 });
+
+Route::get('/page', function () {
+    return view('page');
+});
+
+Route::get('/store', function () {
+    return view('store');
+});
+
+
