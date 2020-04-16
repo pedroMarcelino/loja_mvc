@@ -27,4 +27,24 @@ Route::get('/store', function () {
     return view('store');
 });
 
+Route::get('/pag1', function () {
+    return view('authview/pag1');
+})->middleware('auth');
 
+Route::get('/pag2', function () {
+    return view('authview/pag2');
+})->middleware('auth');
+
+Route::get('/pag3', function () {
+    return view('authview/pag3');
+})->middleware('auth');
+
+Route::group(['prefix'=>'clientes'], function () {
+    Route::get('/listar', 'ClientesController@listar')->middleware('auth');
+});
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
