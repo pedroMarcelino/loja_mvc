@@ -3,21 +3,22 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
-
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    Voce Logou!
+                    <h1 style="text-align: center">Logado com sucesso!</h1>
+                    <hr>
+                    <br>
+                    <a href="/clientes/listar">Lista de clientes</a> <br>
+                    <a href="/produtos/adicionar">Adicionar produto</a> <br>
+                    <a href="/produtos/listar">Lista de produtos</a> <br>
+                    <a href="/categorias/adicionar">Adicionar categoria</a> <br>
+                    <a href="/categorias/listar">Lista de categoria</a> <br>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 @endsection

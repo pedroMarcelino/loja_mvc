@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Clientes extends Model
 {
-    // php artisan make:migration cria_tabela_produtos --create=Produtos
+    // php artisan make:migration cria_tabela_clientes --create=Clientes
 
     // Define as colunas
-    protected $fillable = ['id', 'nome', 'email', 'cpf'];
+    protected $fillable = ['id', 'nome', 'email', 'endereco'];
 
     // Nome da tabela
-    protected $table = 'Clientes';
+    protected $table = 'clientes';
 }
