@@ -6,37 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
-    protected $fillable = [
-        'id',
-        'name',
-        'email',
-        'address',
-        'tel'
-    ];
+    // Define as colunas
+    protected $fillable = ['id', 'name', 'email', 'address'];
 
+    // Nome da tabela
     protected $table = 'clients';
-
-    // Ver compras existentes por ID
-    public function sales()
-    {
-        return $this->hasMany(Sales::class, 'customer_id');
-    }
-
-    public function vend_clientes()
-    {
-        return $this->hasManyThrough(Sales::class, Vendedores::class);
-    }
-
-    public function prod_clientes()
-    {
-        return $this->hasManyThrough(
-            Sales::class,
-            ProdutosVenda::class,
-            'produto_id',
-            'customer_id',
-            'id',
-            'id'
-        );
-    }
-
 }

@@ -10,11 +10,12 @@
                     <h1 style="text-align: center">Logado com sucesso!</h1>
                     <hr>
                     <br>
-                    <a href="/clientes/listar">Lista de clientes</a> <br>
                     <a href="/produtos/adicionar">Adicionar produto</a> <br>
                     <a href="/produtos/listar">Lista de produtos</a> <br>
                     <a href="/categorias/adicionar">Adicionar categoria</a> <br>
                     <a href="/categorias/listar">Lista de categoria</a> <br>
+                    <a href="/roles">Lista de permissões</a> <br>
+                    <a href="/users">Lista de usuários</a> <br>
                 </div>
             </div>
         </div>

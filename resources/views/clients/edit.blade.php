@@ -5,10 +5,10 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Editar Perfil</h2>
+            <h2>Editar Cliente</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('roles.index') }}"> Voltar</a>
+            <a class="btn btn-primary" href="{{ route('clients.index') }}"> Voltar</a>
         </div>
     </div>
 </div>
@@ -29,7 +29,7 @@
 
 @endif
 
-{!! Form::model($role, ['method' => 'PATCH','route' => ['roles.update', $role->id]]) !!}
+{!! Form::model($client, ['method' => 'PATCH','route' => ['clients.update', $client->id]]) !!}
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -42,26 +42,26 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Permissão:</strong>
-            <br/>
+            <strong>E-mail:</strong>
 
-            @foreach($permission as $value)
-
-                <label>{{ Form::checkbox('permission[]', $value->id, in_array($value->id, $rolePermissions) ? true : false, array('class' => 'name')) }}
-
-                {{ $value->name }}</label>
-
-            <br/>
-
-            @endforeach
+            {!! Form::text('email', null, array('placeholder' => 'Email','class' => 'form-control')) !!}
 
         </div>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Endereço:</strong>
+
+            {!! Form::text('address', null, array('placeholder' => 'Address','class' => 'form-control')) !!}
+
+        </div>
+    </div>
+
+
     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
         <button type="submit" class="btn btn-primary">Gravar</button>
     </div>
 </div>
-
 {!! Form::close() !!}
 
 

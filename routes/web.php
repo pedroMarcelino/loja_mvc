@@ -21,10 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'clientes'], function () {
-    Route::get('/listar', 'ClientesController@listar')->middleware('auth');
-});
-
 Route::group(['prefix' => 'produtos'], function () {
     Route::get('/adicionar', 'ProductsController@addView')->middleware('auth');
     Route::post('/cadastrar', 'ProductsController@store')->middleware('auth');
@@ -40,4 +36,5 @@ Route::group(['prefix' => 'categorias'], function () {
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UserController');
     Route::resource('roles', 'RoleController');
+    Route::resource('clients', 'ClientController');
 });
