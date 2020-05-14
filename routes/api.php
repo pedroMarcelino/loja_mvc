@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'v1'], function () {
+    Route::get('/vendedores', 'VendedoresController@index');
+    Route::get('/vendedores/{id}', 'VendedoresController@show');
+    Route::post('/vendedores', 'VendedoresController@store');
+    Route::put('/vendedores/{id}', 'VendedoresController@update');
+    Route::delete('/vendedores/{id}', 'VendedoresController@destroy');
+});

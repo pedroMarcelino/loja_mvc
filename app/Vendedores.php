@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vendedores extends Model
 {
-    protected $fillable = ['id', 'nome'];
-    protected $table = 'Vendedores';
+        // Define as colunas
+        protected $fillable = ['id', 'nome'];
+
+        // Nome da tabela
+        protected $table = 'vendedores';
 }
